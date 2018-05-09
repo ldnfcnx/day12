@@ -1,0 +1,456 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family:ProximaNova;
+    font-size: 14px;
+}
+p{
+    font-family: Myriad Pro;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.group::before,.group::after{
+    display: table;
+}
+.group::after{
+    clear: both;
+}
+.group>.btn{
+    float: left;
+}
+.badge{
+    border-radius: 12px;
+    padding: 0 8px;
+    float: right;
+}
+.blue{
+    background-color: #2499f1;
+    color: #fff;
+}
+.err{
+    background-color: #d9371a;
+    color: #fff;
+}
+.err::after{
+    content: "!";
+}
+aside{
+    position: fixed;
+    top:0;
+    left:0;
+    height: 100%;
+    overflow: hidden;
+}
+#primary{
+    width: 100px;
+    background-color:#1d2531;
+    float: left;
+    position: relative;
+    height: 100%;
+}
+#primary li{
+    margin: 20px 20px 0 20px;
+}
+#primary>div{
+    position: absolute;
+    bottom: 20px;
+    margin: 0 26px;
+}
+#primary>div>a:first-child{
+    margin-right: 11px;
+}
+#secondary{
+    width: 250px;
+    background-color: #222c3c;
+    height: 100%;
+    float: left;
+    position: relative;
+}
+#secondary a{
+    color: #b7c0cd;
+}
+#secondary ul{
+    width: 190px;
+    margin: 0 30px 0 30px;
+    padding: 28px 0;
+    border-top: 1px solid #2a3547;
+}
+#secondary li{
+    margin-top: 8px;
+}
+#secondary img{
+    margin-right: 14px;
+}
+#secondary ul:first-child{
+    border: none;
+}
+#secondary h4{
+    font-size: 12px;
+    color: #475364;
+    text-transform: uppercase;
+    position: relative;
+}
+#secondary h4::after{
+    content: "";
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    right: 0;
+    background-image: url(img/Settings.png);
+}
+#secondary>div{
+    position: absolute;
+    bottom: 20px;
+    padding: 0 30px;
+    color: #fff;
+}
+#secondary>div>span:nth-child(1){
+    float: left;
+}
+#secondary>div>span:nth-child(2){
+    float: right;
+}
+#secondary>div>span:nth-child(3){
+    display: inline-block;
+    width: 190px;
+    border-radius: 2px;
+    height: 4px;
+    background-color: #2d3848;
+    position: relative;
+}
+#secondary>div>span:nth-child(3)>span{
+    width: 21%;
+    border-radius: 2px;
+    height: 4px;
+    background: linear-gradient(to right, #7757d6 0%,#9c8de3 100%);
+    position: absolute;
+    left: 0;
+}
+header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: calc( 100% - 350px);
+    height: 80px;
+    padding: 10px 30px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #e6e9ec;
+    background-color: #fff;
+    z-index: 1;
+}
+header h1{
+    color: #354052;
+    font-size: 24px;
+    float: left;
+}
+#profile{
+    float: right;
+    width: 220px;
+    position: relative;
+}
+.photo{
+    position: relative;
+    display: inline-block;
+    margin-right: 20px;
+}
+#profile .photo{
+    width: 50px;
+    height: 50px;
+    float: left;
+}
+.photo>img{
+    border-radius: 50%;
+    width: 100%;
+    height: auto;
+}
+.status{
+    border-radius: 50%;
+    position: absolute;
+    width: 19px;
+    height: 19px;
+    background-color: #fff;
+    bottom: 0;
+    right: 10%;
+}
+.status img{
+    margin: 3px;
+}
+#profile .name{
+    color: #2399f1;
+    font-size: 16px;
+}
+#profile .role{
+    color: #b5b5b5;
+}
+.dropdown{
+    width: 11px;
+    height: 7px;
+    background-image: url(img/dropdown.png);
+}
+#profile .dropdown{
+    position: absolute;
+    top:50%;
+    right: 0;
+    margin: -4px 0 0 0;
+}
+main{
+    width: calc( 100% - 350px);
+    overflow: hidden;
+    margin: 80px 0 0 350px;
+    height: calc( 100% - 80px);
+}
+#chats{
+    width: 400px;
+    float: left;
+}
+#search,article,#profile_1{
+    border-bottom: 1px solid #e6e9ec;
+    padding: 15px 30px;
+    position: relative;
+}
+#search input{
+    border:  1px solid #e6e9ec;
+    border-radius: 4px;
+    color: #e6e9ec;
+    width: 340px;
+    height: 36px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+#search button{
+    background: transparent;
+    border: transparent;
+    position: absolute;
+    top:25px;
+    right: 43px;
+}
+#chats .avatar{
+    position: relative;
+}
+#chats .avatar .photo{
+    width: 46px;
+    height: 46px;
+    overflow: hidden;
+    border-radius: 50%;
+    float: left;
+}
+#chats .avatar .name{
+    font-size: 16px;
+    color: #585d68;
+}
+#chats .avatar .role{
+    font-size: 14px;
+    color: #b5b5b5;
+}
+#chats .avatar .time{
+    color: #7f8fa4;
+    font-size: 14px;
+    position: absolute;
+    top:50%;
+    right: 0;
+    margin: -16px 0 0 0;
+}
+#chats article .notification{
+    background-color: #289df5;
+    position: absolute;
+    color: #fff;
+    top:78px;
+    right: 20px;
+    display: none;
+}
+#chats article p{
+    color: #585d68;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    width: 330px;
+    margin: 15px 0 0 0;
+}
+#chats article:hover{
+    border-left: 3px solid #2399f1;
+}
+#chats article:hover .notification{
+    display: inline;
+}
+#chats article:hover p{
+    width: 310px;
+}
+#chats article:hover .name{
+    color: #2399f1;
+}
+#chats article:hover .name::before{
+    content: "";
+    width: 8px;
+    height: 8px;
+    background-color: #2399f1;
+    display: inline-block;
+    border-radius: 50%;
+    margin: 0 5px 2px 0;
+}
+#message{
+    float: left;
+    width: calc( 100% - 401px);
+    overflow: hidden;
+    border-left: 1px solid #e6e9ec; 
+}
+#message article{
+    border:transparent;
+}
+#profile_1,#search{
+    height: 70px;
+    box-sizing: border-box;
+}
+#profile_1 h2{
+    font-size: 18px;
+    color: #585d68;
+    float: left;
+}
+#profile_1 .group{
+    display: inline-block;
+}
+#profile_1 h2::after{
+    content: "";
+    width: 8px;
+    height: 8px;
+    background-color: #1bb934;
+    display: inline-block;
+    border-radius: 50%;
+    margin: 0 0 2px 20px;
+}
+#profile_1 .right{
+    float: right;
+}
+.group>button:first-child{
+    border-radius: 4px 0 0 4px;
+}
+.group>button:last-child{
+    border-radius: 0 4px 4px 0;
+}
+.group>button{
+    width: 35px;
+    height: 35px;
+    border-color: #ced0da;
+    background: linear-gradient(to bottom, #fff 0%,#f2f4f7 100%);
+}
+#profile_1 .right .tools{
+    margin: 0 20px 0 0;
+}
+#profile_1 .right span{
+    line-height: 31px;
+    color: #56688a;
+    display: inline-block;
+    width: 62px;
+    text-align: right;
+    margin: 0 18px 0 0;
+    border-left: 1px solid #f0f1f4;
+    position: relative;
+    top:-10px;
+}
+#message article{
+    display: flex;
+}
+#message .photo{
+    width: 46px;
+    height: 46px;
+}
+#message .text{
+    width: calc( 100% - 60px );
+}
+#message .text .name{
+    font-size: 16px;
+    display: inline;
+    margin: 0 5px 0 0;
+    color: #585d68;
+}
+#message .text .time{
+    color: #7f8fa4;
+}
+#message .text p{
+    color: #585d68;
+    margin: 10px 0 0 0;
+}
+#message hr{
+    margin: 5px 0;
+    border:.5px solid #d9dde3;
+    text-align: center;
+}
+#message .new_messages{
+    border:.5px solid #2399f1;
+}
+#message .tuesday::after{
+    content: "Tuesday";
+    background-color: #fff;
+    display: inline-block;
+    color: #7f8fa4;
+    position: absolute;
+    padding: 0 20px;
+    z-index: 1;
+    margin: -10px;
+}
+#message .new_messages::after{
+    content: "New Messages";
+    display: inline-block;
+    background-color: #fff;
+    color: #2399f1;
+    position: absolute;
+    padding: 0 20px;
+    z-index: 1;
+    margin: -10px;
+}
+#message .image{
+    width: 156px;
+    height:100px;
+    background-color: #323844;
+    display: inline-block;
+    border-radius: 4px;
+    margin: 17px 0 0;
+    overflow: hidden;
+    position: relative;
+}
+#message .image img{
+    width: 100%;
+    height: auto;
+}
+#message .image:hover img{
+    opacity: .55;
+}
+#message .image:hover::after{
+    content: "";
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255,255,255,.3);
+    background-image: url(img/Openicon.png);
+    position: absolute;
+    border-radius:50%; 
+    top:50%;
+    left: 50%;
+    margin: -25px 0 0 -25px;
+}
+#message form button{
+    border-radius: 4px 0 0 4px;
+    border-color: #ced0da;
+    width: 54px;
+    height: 54px;
+    background: linear-gradient(to bottom, #fff 0%,#f2f4f7 100%);
+}
+#message form textarea{
+    height: 54px;
+    width: 500px;
+    border-radius: 0 4px 4px 0;
+    border-color: #ced0da;
+    box-sizing: border-box;
+    padding: 18px;
+}
+#message form{
+    overflow: hidden;
+    margin: 0 30px 30px;
+}
